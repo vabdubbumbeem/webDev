@@ -3,23 +3,43 @@
     list-style: none; 
     padding: 0; 
     display: inline-block;
-	margin: 2%;
+	margin: 0;
     text-align: left;
 }
 .TextContainer {
+    margin-left: 10px;
     display: inline-block;
     max-width: 40%;
-    min-width: 80px;
-	margin-right: 20px;
+    min-width: 350px;
+	margin-right: 10px;
     text-align: left;
+    height: 100%;
+}
+.TextContainer p, h1,h2,h3 {
+    font-family: Istok Web;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 46px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+}
+.TextContainer p {
+    font-weight: 400;
+}
+.TextContainer h1 {
+    font-size: 36px;
+}
+.TextContainer h2 {
+    margin-bottom: 20px;
 }
 
 .MapContainer {
     display: inline-block;
     max-width: 50%;
-    min-width: 80px;
-	margin-right: 20px;
+    min-width: 350px;
     text-align: left;
+    max-height: 100%;
 }
 .MapContainer img {
     
