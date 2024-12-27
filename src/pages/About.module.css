@@ -1,0 +1,111 @@
+.offer {
+    position: relative;
+    text-align: center;
+    font-family: Istok Web;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    height: fit-content;
+    background-color: #40923D;
+}
+.offer img {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    margin-left: 0px;
+}
+.title, .subtitle {
+    color: white;
+    background: none;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+.offer div {
+    position: absolute;
+    display: grid;
+    justify-content: center;
+    color: white;
+    background: none;
+    width: 60%;
+    max-width: 561px;
+    height: 100%;
+    max-height: 500px;
+    top: 5%;
+    right: 5%;
+    font-weight: 700;
+}
+
+.title {
+    width: 100%;
+    align-items: center;
+    font-size: 128px;
+    font-weight: 700;
+    line-height: 128px;
+    max-width: 560px;
+    max-height: fit-content;
+}
+.subtitle{
+    align-items: center;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 50px;
+    max-width: 560px;
+}
+
+.order {
+    padding: 10px 20px;
+    border: none;
+    background-color: #40923D;
+    color: white;
+    font-size: 32px;
+    font-weight: 400;
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+}
+.KatyaFrame {
+    width: 100%;
+    padding: 0; 
+    display: inline-block;
+    text-align: left;
+    align-items: top;
+}
+.KatyaFrame div{
+    display: inline-block;
+    max-width: max-content;
+    min-width: 250px;
+    width: 50%;
+    text-align: left;
+}
+.TextFrame {
+    
+}
+
+.TextFrame h1 {
+    font-family: Istok Web;
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 92.13px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+
+}
+.TextFrame p {
+    font-family: Istok Web;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 31.67px;
+    max-width: 500px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+}
+
+.PicFrame {
+}
+
+.PicFrame img {
+
+}

@@ -1,0 +1,8 @@
+.App {
+    width: 100%;
+    background-color: aliceblue;
+    height: 100%;
+    min-width: 340px;
+    background: fixed;
+    margin: 0;
+}

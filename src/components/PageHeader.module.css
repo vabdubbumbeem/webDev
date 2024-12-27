@@ -1,0 +1,51 @@
+.header { 
+    width: 100%;
+    font-family: Istok Web;
+    padding: 0;
+    border: 0px;
+    border-bottom: 2px;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: #454545;
+    margin: 0;
+    } 
+
+    .header ul { 
+    width: 99%;
+    list-style: none; 
+    padding: 0; 
+    display: inline-block;
+	margin: 2%;
+    text-align: left;
+    
+    } 
+
+    .header li {
+    display: inline-block;
+    max-width: max-content;
+    min-width: 80px;
+	margin-right: 20px;
+    text-align: left;
+    }
+
+    .header a { 
+    font-size: 24px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 30px;
+    text-align: center;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: auto;
+    color: rgb(69, 69, 69);
+    } 
+    
+    .header a:hover, 
+    .header a:active, 
+    .header a.active { 
+    color: #40923D; 
+    } 
+
+
+    

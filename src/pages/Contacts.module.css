@@ -1,0 +1,26 @@
+.PageContainer {
+    width: 99%;
+    list-style: none; 
+    padding: 0; 
+    display: inline-block;
+	margin: 2%;
+    text-align: left;
+}
+.TextContainer {
+    display: inline-block;
+    max-width: 40%;
+    min-width: 80px;
+	margin-right: 20px;
+    text-align: left;
+}
+
+.MapContainer {
+    display: inline-block;
+    max-width: 50%;
+    min-width: 80px;
+	margin-right: 20px;
+    text-align: left;
+}
+.MapContainer img {
+    
+}
