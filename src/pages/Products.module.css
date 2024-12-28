@@ -1,0 +1,100 @@
+.PageBody {
+    background-color: greenyellow;
+    padding: 2%;
+    width: 96%;
+    display: block;
+    align-items: center;
+
+}
+.PageBody h1 {
+    background: none;
+    font-family: Istok Web;
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 92.13px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+}
+.PageBody div {
+    margin-bottom: 30px;
+}
+
+.ProductContainer {
+    border-radius: 30px;
+    background-color: aliceblue;
+    width: 90%;
+    padding: 5%;
+    display: flex;
+    
+}
+.ProductContainer * {
+    background: none;
+    display: inline-block;
+}
+.ProductContainer span{
+    color: grey;
+    display: inline;
+
+    font-family: Istok Web;
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 51px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+
+}
+
+.ProductContainer img {
+    top: 0px;
+    width: 305px;
+    height: 372px;
+    border-radius: 30px;
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+}
+.ProductContainer button {
+    width: 100%;
+    border: none;
+    text-decoration: underline;
+    text-decoration-color: yellow;
+    text-decoration-thickness: 4px;
+
+    font-family: Istok Web;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 34px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+
+}
+.ProductContainer button:hover, 
+    .ProductContainer button:active, 
+    .ProductContainer button.active { 
+    color: #40923D; 
+    } 
+.ProductContainer h3 {
+    width: 100%;
+}
+.ProductContainer div {
+    min-width: 350px;
+    width: fit-content;
+    display: inline-flex;
+    flex-direction: column;
+}
+
+.ProductContainer p {
+    min-width: 300px;
+    border-radius: 30px;
+
+    font-family: Istok Web;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 34.55px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+}

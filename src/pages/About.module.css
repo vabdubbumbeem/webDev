@@ -1,18 +1,11 @@
 .offer {
-    position: relative;
     text-align: center;
     font-family: Istok Web;
     width: 100%;
     margin: 0;
     padding: 0;
-    height: fit-content;
-    background-color: #40923D;
-}
-.offer img {
-    width: 100%;
-    padding: 0;
-    margin: 0;
-    margin-left: 0px;
+    display: flex;
+    flex-direction: row-reverse;
 }
 .title, .subtitle {
     color: white;
@@ -22,7 +15,7 @@
     margin: 0;
 }
 .offer div {
-    position: absolute;
+    padding: 50px 10%;
     display: grid;
     justify-content: center;
     color: white;

@@ -8,10 +8,9 @@ function PageHeader() {
             <nav>
                 <ul>
                     <li><Link to="/">О нас</Link></li>
-                    <li><Link to="/advantages">Преимущества</Link></li>
                     <li><Link to="/contacts">Контакты</Link></li>
                     <li><Link to="/products">Услуги/товары</Link></li>
-                    <li><Link to="/discountes">Скидки и акции</Link></li>
+                    <li><Link to="/form">Заказать</Link></li>
                     <li><Link to="/reviews">Отзывы</Link></li>
                 </ul>
                 

@@ -4,17 +4,23 @@ import backgroundimg from "./images/About.background.jpg";
 import KatyaBorn from "./images/KatyaBornMod.png";
 import { Link } from "react-router-dom";
 
+var BackImg = {
+    backgroundPosition: 'center',
+    backgroundSize: 'cover',
+    backgroundRepeat: 'no-repeat',
+    backgroundImage: `url(${backgroundimg})`
+}
+
 function About(){
     return(
         <>
-        <div className={classes.offer}>
-            <img src={backgroundimg} alt="background"></img>
+        <section className={classes.offer} style={BackImg}>
             <div>
                 <h1 className={classes.title}>ПЭЧ</h1>
                 <h2 className={classes.subtitle}>Дизайнерская одежда на заказ. Эксклюзивные модели, созданные специально для вас!<br/><br/>
                 <Link to="/form" className={classes.order}>Заказать сейчас</Link></h2>
             </div>
-        </div>
+        </section>
         
         <div className={classes.KatyaFrame}>
             <div className={classes.TextFrame}>
