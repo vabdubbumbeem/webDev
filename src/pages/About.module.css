@@ -74,7 +74,7 @@
 .KatyaFrame div{
     display: inline-block;
     max-width: max-content;
-    min-width: 250px;
+    min-width: 350px;
     width: 50%;
     text-align: left;
 }
@@ -97,7 +97,7 @@
     font-size: 22px;
     font-weight: 400;
     line-height: 31.67px;
-    max-width: 500px;
+    max-width: 900px;
     text-align: left;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;

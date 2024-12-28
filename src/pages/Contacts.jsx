@@ -1,5 +1,4 @@
 import React from "react";
-import map from "./images/map.jpg";
 import classes from "./Contacts.module.css"
 
 function Contacts(){
@@ -8,9 +7,8 @@ function Contacts(){
             <div className={classes.TextContainer}>
                 <h1>ПЭЧ Дизайнерская одежда</h1>
                 <p>улица Карла Либкнехта, д.131, 127018 Екатеринбург, Россия</p>
-                <h2>Пн-Сб: 9:00-21:00</h2>
-                <h2>Вс: 10:00-20:00</h2>
-                <h2>Прием заявок КРУГЛОСУТОЧНО!</h2>
+                <h2>Пн-Сб: 9:00-21:00<br/> Вс: 10:00-20:00</h2>
+                <h2 style={{color: 'red'}}>Прием заявок КРУГЛОСУТОЧНО!</h2>
                 <h2>Звоните</h2>
                 <p>+7(912)583-65-95</p>
                 <p>pech@gmail.com</p>

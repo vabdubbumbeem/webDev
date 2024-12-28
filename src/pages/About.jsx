@@ -1,7 +1,7 @@
 import React from "react";
 import classes from "./About.module.css"
 import backgroundimg from "./images/About.background.jpg";
-import KatyaBorn from "./images/KatyaBorn.png";
+import KatyaBorn from "./images/KatyaBornMod.png";
 import { Link } from "react-router-dom";
 
 function About(){
