@@ -3,6 +3,7 @@ import classes from "./About.module.css"
 import backgroundimg from "./images/About.background.jpg";
 import KatyaBorn from "./images/KatyaBornMod.png";
 import { Link } from "react-router-dom";
+import 'animate.css';
 
 function About(){
     return(
@@ -10,9 +11,10 @@ function About(){
         <div className={classes.offer}>
             <img src={backgroundimg} alt="background"></img>
             <div>
+           
                 <h1 className={classes.title}>ПЭЧ</h1>
-                <h2 className={classes.subtitle}>Дизайнерская одежда на заказ. Эксклюзивные модели, созданные специально для вас!<br/><br/>
-                <Link to="/form" className={classes.order}>Заказать сейчас</Link></h2>
+                <h2 className={`animate__animated animate__bounceInLeft animate__delay-1s ${classes.subtitle}`}>Дизайнерская одежда на заказ. Эксклюзивные модели, созданные специально для вас! </h2><br/><br/>
+                <Link to="/form" className={classes.order}>Заказать сейчас</Link>
             </div>
         </div>
         
