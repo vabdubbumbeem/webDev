@@ -1,5 +1,6 @@
 import React from "react";
 import classes from "./Reviews.module.css";
+import formClasses from "./Form.module.css";
 import man1 from "./images/man1sq.jpg";
 import man2 from "./images/man2sq.jpg";
 import man3 from "./images/man3sq.jpg";
@@ -55,13 +56,11 @@ function Reviews(){
             <div className={classes.ButtonContainer}>
                 <button>Оставить отзыв</button>
             </div>
-            <div className={classes.Form}>
-                <h2>Форма заказа</h2>
-                <input type="text" placeholder="ФИО" required/><br/>
-                <input type="tel" placeholder="Телефон" required/><br/>
-                <input type="text" placeholder="Адрес" required/><br/>
-                <input type="text" placeholder="Размер одежды" required/><br/>
-                <input type="text" placeholder="Модель товара" required/><br/>
+            <div className={formClasses.Form}>
+                <h2>Форма для отзывов</h2>
+                <input type="text" placeholder="Имя" required/><br/>
+                <input type="text" placeholder="E-mail" required/><br/>
+                <textarea placeholder="Ваш отзыв"></textarea>
                 <button type="submit">Отправить</button>
             </div>
         </div>

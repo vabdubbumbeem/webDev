@@ -3,7 +3,7 @@ import classes from "./About.module.css"
 import backgroundimg from "./images/About.background.jpg";
 import KatyaBorn from "./images/KatyaBornMod.png";
 import { Link } from "react-router-dom";
-import 'animate.css';
+/*import 'animate.css';*/
 
 var BackImg = {
     backgroundPosition: 'center',
