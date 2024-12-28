@@ -3,11 +3,11 @@ import classes from "./PageBottom.module.css";
 
 function PageBottom() {
     return(
-        <div className={classes.PageBottom}>
+        <footer className={classes.PageBottom}>
             <h2>"Copyright sign" Made by Дарья Ляпустина и Сергей Медведев</h2>
-        </div>
+        </footer>
     )
 }
 
 
-export default PageHeader;
+export default PageBottom;

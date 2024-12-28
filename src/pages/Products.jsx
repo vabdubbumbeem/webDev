@@ -23,7 +23,7 @@ function Product(prop){
                 <div>
                         <img src={prop.prop.ProdImage} alt="prop.prop.ProdImage"/>
                 </div>
-
+                
                 <div>
                     <h3>{prop.prop.Name} <span>{prop.prop.Price} ₽</span></h3>
                         <p>

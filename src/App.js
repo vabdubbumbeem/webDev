@@ -5,11 +5,10 @@ import classes from "./App.module.css"
 
 import About from './pages/About';
 import Products from './pages/Products';
-import Advantages from './pages/Advantages';
 import Contacts from './pages/Contacts';
-import Discountes from './pages/Discountes';
 import Form from './pages/Form';
 import Reviews from './pages/Reviews';
+import PageBottom from './components/PageBottom';
 
 
 
@@ -21,20 +20,15 @@ function App() {
       <Routes>
         <Route path="/" element={<About />}>
         </Route>
-        <Route path="/advantages" element={<Advantages />}>
-        </Route>
         <Route path="/contacts" element={<Contacts />}>
         </Route>
         <Route path="/products" element={<Products />}>
-        </Route>
-        <Route path="/discountes" element={<Discountes />}>
         </Route>
         <Route path="/reviews" element={<Reviews />}>
         </Route>
         <Route path="/form" element={<Form />}>
         </Route>
       </Routes>
-    
     </div>
     </>
   );

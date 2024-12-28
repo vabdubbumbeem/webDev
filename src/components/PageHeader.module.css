@@ -1,17 +1,17 @@
 .header { 
     width: 100%;
     font-family: Istok Web;
-    padding: 0;
     border: 0px;
     border-bottom: 2px;
     border-radius: 0px;
     border-style: solid;
     border-color: #454545;
     margin: 0;
+    background-color: aliceblue;
     } 
 
     .header ul { 
-    width: 99%;
+    width: 96%;
     list-style: none; 
     padding: 0; 
     display: inline-block;

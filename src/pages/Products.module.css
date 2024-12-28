@@ -1,10 +1,9 @@
 .PageBody {
-    background-color: greenyellow;
+    background: linear-gradient(180deg, #D3F6A0 39.6%, #75B21E 100%);
     padding: 2%;
     width: 96%;
     display: block;
     align-items: center;
-
 }
 .PageBody h1 {
     background: none;
@@ -25,8 +24,7 @@
     background-color: aliceblue;
     width: 90%;
     padding: 5%;
-    display: flex;
-    
+    display: flex; 
 }
 .ProductContainer * {
     background: none;

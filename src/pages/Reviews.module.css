@@ -1,0 +1,97 @@
+.PageBody {
+    background: #000000;
+    padding: 2%;
+    width: 96%;
+    display: block;
+    align-items: center;
+}
+.ButtonContainer {
+    background: none;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+.ButtonContainer button {
+    background: #AECD90;
+    color: black;
+    width: 300px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 80px 0px;
+
+    font-family: Istok Web;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 57.58px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+  }
+.CommentContainer {
+    background-color: #000000;
+    display: flex;
+    width: 100%;
+    height: fit-content;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: 10px;
+  padding-bottom: 20px;
+  }
+
+.PageBody h1 {
+    background: none;
+    color: aliceblue;
+    font-family: Istok Web;
+    font-size: 50px;
+    font-weight: 700;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+
+}
+.Comment{
+    background-color: aliceblue;
+    width: fit-content;
+    display: flex;
+    min-height: 400px;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-right: 20px;
+    max-width: 100%;
+    min-width: 500px;
+}
+.Comment * {
+    background: none;
+}
+.Comment img {
+    width: 150px;
+    border-radius: 50%;
+}
+.Comment div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: fit-content;
+    padding: 20px;
+}
+.Comment p, h6{
+    display: block;
+    font-family: Istok Web;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 28px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    padding: 5px;
+    background: none;
+    max-height: none;
+    min-width: 250px;
+    width: 40%;
+    max-width: 600px;
+}
+.Comment h6 {
+    border-top: 2px solid;
+}
