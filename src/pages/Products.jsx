@@ -1,7 +1,9 @@
-import React from "react";
+import {Children, React, useState} from "react";
+import {motion, AnimatePresence} from 'framer-motion';
 import classes from "./Products.module.css"
 import DarkWay from "./images/DarkWay.jpg";
 import StarNight from "./images/StarNight.jpg";
+
 let prop1 = {
     ProdImage: StarNight,
     Price: "14200",
@@ -16,6 +18,30 @@ let prop2 = {
     Description: "Эти стильные джоггеры из темных ласкутов ткани — идеальный выбор для тех, кто ценит комфорт и современный стиль. Изготовленные из мягкого и эластичного материала, они обеспечивают свободу движений и приятные ощущения на коже. Глубокий темный оттенок легко сочетается с различными топами и обувью, придавая вашему образу утонченность.",
     FullDescription: "Джоггеры выполнены из мягкого и эластичного материала, имеют эластичный пояс с завязками для регулировки и манжеты на щиколотках, что обеспечивает идеальную посадку и комфорт при движении. Дизайн включает в себя стильные карманы по бокам и аккуратные строчки, подчеркивающие современный крой. Подходит для  любителей черного.",
 }
+const Collapsible = (props) => {
+    const {
+        title = "click me",
+        children,
+    } = props
+    const [isVisible, setVisible] = useState(false);
+    const handleVisibility = () => setVisible(!isVisible);
+    return(
+        <>
+            <button
+                onClick={handleVisibility}
+            >
+                {title}
+            </button>
+            <AnimatePresence>{
+                isVisible &&
+                <motion.p>
+                    {children}
+                </motion.p>
+            }
+            </AnimatePresence>
+        </>
+    )
+}
 
 function Product(prop){
     return(
@@ -29,10 +55,10 @@ function Product(prop){
                         <p>
                         {prop.prop.Description}
                         </p>
-                        <button>Детали</button>
-                        <p>
-                        {prop.prop.FullDescription}
-                        </p>
+                        
+                        <Collapsible title="Детали">
+                            {prop.prop.FullDescription}
+                        </Collapsible>
                     </div>
                     
                 </div>
