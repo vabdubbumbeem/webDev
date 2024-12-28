@@ -4,6 +4,8 @@ import formClasses from "./Form.module.css";
 import man1 from "./images/man1sq.jpg";
 import man2 from "./images/man2sq.jpg";
 import man3 from "./images/man3sq.jpg";
+import {useState} from "react";
+import 'animate.css';
 
 let prop1 = {
     Pic: man1,
@@ -37,34 +39,84 @@ function Comment(prop){
         </div>
     )
 }
-function Form() {
-    return(
-        <>
-        </>
-    )
-}
+function Reviews() {
+    const [title, setTitle] = useState('');
+    const [email, setEmail] = useState('');
+    const [TitleMessage, setTitleMessage] = useState('');
+    const [EmailMessage, setEmailMessage] = useState('');
+    const [isTitleValid, setIsTitleValid] = useState(false);
+    const [isEmailValid, setIsEmailValid] = useState(false);
 
-function Reviews(){
-    return(
+
+    // Функция для проверки имени
+    const checkTitle = (value) => {
+        const regex = /^[а-яА-Я\s]{1,20}$/; 
+        if (regex.test(value)) {
+            setTitleMessage("Имя введено корректно :)");
+            setIsTitleValid(true);
+        } else {
+            setTitleMessage("Пожалуйста, напишите имя русскими буквами");
+            setIsTitleValid(false);
+        }
+    };
+
+    // Функция для проверки E-mail
+    const checkEmail = (value) => {
+        const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (regex.test(value)) { 
+            setEmailMessage("E-mail введен корректно :)");
+            setIsEmailValid(true);
+        } else {
+            setEmailMessage("Неправильный ввод E-mail");
+            setIsEmailValid(false);
+        }
+    };
+
+    // Обработчик изменения ввода
+    const handleChange = (e) => {
+        const { name, value } = e.target; // Получаем имя и значение поля
+        if (name === 'title') {
+            setTitle(value); // Обновляем состояние имени
+            checkTitle(value); // Проверяем имя
+        } else if (name === 'email') {
+            setEmail(value); // Обновляем состояние телефона
+            checkEmail(value); // Проверяем телефон
+        } 
+    };
+    
+
+      // Обработчик отправки формы
+      const handleSubmit = (e) => {
+        e.preventDefault(); // Предотвращаем стандартное поведение формы
+        if (isTitleValid && isEmailValid) {
+            alert(`Здравствуйте ${title}!\nСпасибо за отзыв!\n` +
+                `Ваш E-mail: ${email}\n` +
+                `Мы ценим ваше мнение и постараемся сделать наш сервис еще лучше!`);
+            }
+    };
+    return (
         <div className={classes.PageBody}>
             <h1>Отзывы о нашей работе</h1>
             <div className={classes.CommentContainer}>
-                <Comment prop={prop1}/>
-                <Comment prop={prop2}/>
-                <Comment prop={prop3}/>
+                <Comment prop={prop1} />
+                <Comment prop={prop2} />
+                <Comment prop={prop3} />
             </div>
             <div className={classes.ButtonContainer}>
                 <button>Оставить отзыв</button>
             </div>
             <div className={formClasses.Form}>
                 <h2>Форма для отзывов</h2>
-                <input type="text" placeholder="Имя" required/><br/>
-                <input type="text" placeholder="E-mail" required/><br/>
-                <textarea placeholder="Ваш отзыв"></textarea>
-                <button type="submit">Отправить</button>
+                <form onSubmit={handleSubmit}>
+                    <input type="text" name="title" placeholder="Имя" value={title} onChange={handleChange} onBlur={() => checkTitle(title)} required />
+                    {TitleMessage && <span className={isTitleValid ? classes.valid : classes.invalid}>{TitleMessage}</span>} <br />
+                    <input type="text" name="email" placeholder="E-mail" value={email} onChange={handleChange} onBlur={() => checkEmail(email)} required />
+                    {EmailMessage && <span className={isEmailValid ? classes.valid : classes.invalid}>{EmailMessage}</span>}<br />
+                    <textarea placeholder="Ваш отзыв"></textarea>
+                    <button type="submit" disabled={!(isTitleValid && isEmailValid)}>Отправить</button>
+                </form>
             </div>
         </div>
-    )
+    );   
 }
-
 export default Reviews;

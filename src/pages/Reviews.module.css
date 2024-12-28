@@ -28,7 +28,25 @@
     text-align: center;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
-  }
+    /* Применение анимации */
+    animation: pulse 1.5s infinite; /* Анимация будет повторяться бесконечно */
+}
+
+/* Определение анимации */
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1); /* Исходный размер */
+    }
+    50% {
+        transform: scale(1.05); /* Увеличение на 5% */
+    }
+}
+
+/* Эффект при наведении */
+.ButtonContainer button:hover {
+    transform: scale(1.1); /* Увеличение кнопки до 110% при наведении */
+    transition: transform 0.3s ease; /* Плавный переход */
+}
 .CommentContainer {
     background-color: #000000;
     display: flex;
@@ -95,3 +113,9 @@
 .Comment h6 {
     border-top: 2px solid;
 }
+.valid {
+    color: green;
+  }
+  .invalid {
+    color: red;
+  }
