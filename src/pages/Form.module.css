@@ -25,3 +25,9 @@
     border-radius: 4px;
     cursor: pointer;
   }
+  .valid {
+    color: green;
+  }
+  .invalid {
+    color: red;
+  }
