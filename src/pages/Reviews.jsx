@@ -72,10 +72,13 @@ const Collapsible = (props) => {
 function Reviews() {
     const [title, setTitle] = useState('');
     const [email, setEmail] = useState('');
+    const [review, setReview] = useState('');
     const [TitleMessage, setTitleMessage] = useState('');
     const [EmailMessage, setEmailMessage] = useState('');
+    const [ReviewMessage, setReviewMessage] = useState('');
     const [isTitleValid, setIsTitleValid] = useState(false);
     const [isEmailValid, setIsEmailValid] = useState(false);
+    const [isReviewValid, setIsReviewValid] = useState(false);
 
 
     // Функция для проверки имени
@@ -102,6 +105,16 @@ function Reviews() {
         }
     };
 
+   // Функция для проверки отзыва
+    const checkReview = (value) => {
+        if (value.trim() === '') {
+            setReviewMessage("Пожалуйста, напишите отзыв."); // Сообщение о необходимости заполнения
+            setIsReviewValid(false);
+        } else {
+            setReviewMessage(""); // Очищаем сообщение, если отзыв не пустой
+            setIsReviewValid(true);
+        }
+    };
     // Обработчик изменения ввода
     const handleChange = (e) => {
         const { name, value } = e.target; // Получаем имя и значение поля
@@ -111,14 +124,17 @@ function Reviews() {
         } else if (name === 'email') {
             setEmail(value); // Обновляем состояние телефона
             checkEmail(value); // Проверяем телефон
-        } 
+        } else if (name === 'review') { // Обработка отзыва
+            setReview(value);
+            checkReview(value); // Проверяем отзыв
+        }
     };
     
 
       // Обработчик отправки формы
       const handleSubmit = (e) => {
         e.preventDefault(); // Предотвращаем стандартное поведение формы
-        if (isTitleValid && isEmailValid) {
+        if (isTitleValid && isEmailValid && isReviewValid) {
             alert(`Здравствуйте ${title}!\nСпасибо за отзыв!\n` +
                 `Ваш E-mail: ${email}\n` +
                 `Мы ценим ваше мнение и постараемся сделать наш сервис еще лучше!`);
@@ -141,7 +157,8 @@ function Reviews() {
                     {TitleMessage && <span className={isTitleValid ? classes.valid : classes.invalid}>{TitleMessage}</span>} <br />
                     <input type="text" name="email" placeholder="E-mail" value={email} onChange={handleChange} onBlur={() => checkEmail(email)} required />
                     {EmailMessage && <span className={isEmailValid ? classes.valid : classes.invalid}>{EmailMessage}</span>}<br />
-                    <textarea placeholder="Ваш отзыв"></textarea>
+                    <textarea name="review" placeholder="Ваш отзыв" value={review} onChange={handleChange} onBlur={() => checkReview(review)} required></textarea>
+                    {ReviewMessage && <span className={isReviewValid ? classes.valid : classes.invalid}>{ReviewMessage}</span>}<br/>
                     <button type="submit" disabled={!(isTitleValid && isEmailValid)}>Отправить</button>
                 </form>
             </div>
