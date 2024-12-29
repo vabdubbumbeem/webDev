@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/static/css/main.65de671c.css",
+    "main.js": "/static/js/main.1159faa3.js",
+    "static/media/StarNight.jpg": "/static/media/StarNight.8dc2c817b40f116ad071.jpg",
+    "static/media/DarkWay.jpg": "/static/media/DarkWay.1765704f95f8d9340756.jpg",
+    "static/media/KatyaBornMod.png": "/static/media/KatyaBornMod.ccd30c8befb5091e5121.png",
+    "static/media/About.background.jpg": "/static/media/About.background.a8e0d41b978ab19d71e4.jpg",
+    "static/media/man3sq.jpg": "/static/media/man3sq.d0e5cebf5b9e6b1f65bf.jpg",
+    "static/media/man2sq.jpg": "/static/media/man2sq.314d338c635ee4aead6b.jpg",
+    "static/media/man1sq.jpg": "/static/media/man1sq.9d4824fb86cf822604e8.jpg",
+    "index.html": "/index.html",
+    "main.65de671c.css.map": "/static/css/main.65de671c.css.map",
+    "main.1159faa3.js.map": "/static/js/main.1159faa3.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.65de671c.css",
+    "static/js/main.1159faa3.js"
+  ]
+}
