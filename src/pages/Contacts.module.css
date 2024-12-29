@@ -1,6 +1,5 @@
 .PageContainer {
-    width: 99%;
-    list-style: none; 
+    width: 100%;
     padding: 0; 
     display: flex;
 	margin: 0;
@@ -8,8 +7,8 @@
 }
 .TextContainer {
     margin-left: 10px;
-    display: inline-block;
-    max-width: 40%;
+    display: flex;
+    flex-direction: column;
     min-width: 350px;
 	margin-right: 10px;
     text-align: left;
@@ -35,9 +34,23 @@
 }
 
 .MapContainer {
-    display: inline-block;
-    max-width: 50%;
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
     min-width: 350px;
     text-align: left;
     max-height: 100%;
+}
+@media (max-width: 600px) {
+    .PageContainer{
+        flex-direction: column;
+    }
+    .MapContainer {
+        height: 600px;
+    }
+}
+@media (min-width: 1000px) {
+    .PageContainer {
+        width: 1000px;
+    }
 }

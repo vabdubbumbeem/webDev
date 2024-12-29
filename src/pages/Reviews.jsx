@@ -1,11 +1,12 @@
 import React from "react";
+import {motion, AnimatePresence} from 'framer-motion';
 import classes from "./Reviews.module.css";
 import formClasses from "./Form.module.css";
 import man1 from "./images/man1sq.jpg";
 import man2 from "./images/man2sq.jpg";
 import man3 from "./images/man3sq.jpg";
 import {useState} from "react";
-import 'animate.css';
+//import 'animate.css';
 
 let prop1 = {
     Pic: man1,
@@ -19,8 +20,8 @@ let prop2 = {
 }
 let prop3 = {
     Pic: man3,
-    Name: "Агуга",
-    Comment: "Кто я? Пуки каки или каки пуки?",
+    Name: "Сережа",
+    Comment: "Всё очень классно парик очень понравился :^D",
 }
 function Comment(prop){
     return(
@@ -37,6 +38,35 @@ function Comment(prop){
                 </h6>
             </div>
         </div>
+    )
+}
+const Collapsible = (props) => {
+    const {
+        title = "click me",
+        children,
+    } = props
+    const [isVisible, setVisible] = useState(false);
+    const handleVisibility = () => setVisible(!isVisible);
+    return(
+        <>
+            <button className={classes.ButtonContainer}
+                onClick={handleVisibility}
+            >
+                {title}
+            </button>
+            <AnimatePresence>{
+                isVisible &&
+                <motion.div
+                    style={{background: "none", overflow: 'hidden'}}
+                    initial={{height: 0, opacity: 0}}
+                    animate={{height: 'auto', opacity: 1}}
+                    exit={{height: 0, opacity: 0}}
+                >
+                    {children}
+                </motion.div>
+            }
+            </AnimatePresence>
+        </>
     )
 }
 function Reviews() {
@@ -102,10 +132,9 @@ function Reviews() {
                 <Comment prop={prop2} />
                 <Comment prop={prop3} />
             </div>
-            <div className={classes.ButtonContainer}>
-                <button>Оставить отзыв</button>
-            </div>
-            <div className={formClasses.Form}>
+
+            <Collapsible title="Оставить отзыв">
+            <div className={formClasses.Form} style={{borderRadius: "10px",}}>
                 <h2>Форма для отзывов</h2>
                 <form onSubmit={handleSubmit}>
                     <input type="text" name="title" placeholder="Имя" value={title} onChange={handleChange} onBlur={() => checkTitle(title)} required />
@@ -116,6 +145,7 @@ function Reviews() {
                     <button type="submit" disabled={!(isTitleValid && isEmailValid)}>Отправить</button>
                 </form>
             </div>
+            </Collapsible>
         </div>
     );   
 }

@@ -34,7 +34,12 @@ const Collapsible = (props) => {
             </button>
             <AnimatePresence>{
                 isVisible &&
-                <motion.p>
+                <motion.p
+                    style={{padding: '10px', overflow: 'hidden'}}
+                    initial={{height: 0, opacity: 0}}
+                    animate={{height: 'auto', opacity: 1}}
+                    exit={{height: 0, opacity: 0}}
+                >
                     {children}
                 </motion.p>
             }

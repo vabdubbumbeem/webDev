@@ -20,13 +20,34 @@
     justify-content: center;
     color: white;
     background: none;
-    width: 60%;
+    width: 70%;
     max-width: 561px;
     height: 100%;
-    max-height: 500px;
+    max-height: 700px;
+    min-height: 700px;
     top: 5%;
     right: 5%;
     font-weight: 700;
+}
+@media (max-width: 600px) {
+    .offer div {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        top: unset;
+        right: unset;
+        align-items: center;
+    }
+    .offer div a {
+        max-width: 100%;
+    }
+    .KatyaFrame {
+        flex-direction: column;
+    }
+    .order {
+        padding: 2%;
+        width: fit-content;
+    }
 }
 
 .title {
@@ -48,6 +69,9 @@
 
 .order {
     padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     border: none;
     background-color: #40923D;
     color: white;
@@ -64,19 +88,20 @@
 .KatyaFrame {
     width: 100%;
     padding: 0; 
-    display: inline-block;
+    display: flex;
     text-align: left;
     align-items: top;
+    justify-content: center;
 }
 .KatyaFrame div{
-    display: inline-block;
+    display: flex;
     max-width: max-content;
     min-width: 350px;
     width: 50%;
     text-align: left;
 }
 .TextFrame {
-    
+    flex-direction: column;
 }
 
 .TextFrame h1 {
@@ -94,13 +119,14 @@
     font-size: 22px;
     font-weight: 400;
     line-height: 31.67px;
-    max-width: 900px;
+    max-width: 600px;
     text-align: left;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
 }
 
 .PicFrame {
+    flex-direction: column;
 }
 
 .PicFrame img {

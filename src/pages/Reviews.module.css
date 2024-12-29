@@ -2,16 +2,11 @@
     background: #000000;
     padding: 2%;
     width: 96%;
-    display: block;
-    align-items: center;
-}
-.ButtonContainer {
-    background: none;
-    align-items: center;
     display: flex;
+    align-items: center;
     flex-direction: column;
 }
-.ButtonContainer button {
+.ButtonContainer{
     background: #AECD90;
     color: black;
     width: 300px;
@@ -19,7 +14,7 @@
     border: none;
     border-radius: 10px;
     cursor: pointer;
-    margin: 80px 0px;
+    margin: 50px 0px;
 
     font-family: Istok Web;
     font-size: 32px;

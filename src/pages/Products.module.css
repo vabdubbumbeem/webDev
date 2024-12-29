@@ -26,6 +26,11 @@
     padding: 5%;
     display: flex; 
 }
+@media  (max-width:800px) {
+    .ProductContainer {
+        flex-direction: column;
+    }
+}
 .ProductContainer * {
     background: none;
     display: inline-block;
@@ -45,7 +50,6 @@
 }
 
 .ProductContainer img {
-    top: 0px;
     width: 305px;
     height: 372px;
     border-radius: 30px;

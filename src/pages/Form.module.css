@@ -18,6 +18,9 @@
     border-radius: 4px;
     box-sizing: border-box;
   }
+  .Form select {
+    cursor: pointer;
+  }
   .Form button {
     background-color: #4CAF50;
     color: white;
