@@ -29,7 +29,7 @@
     right: 5%;
     font-weight: 700;
 }
-@media (max-width: 600px) {
+@media (max-width: 720px) {
     .offer div {
         width: 100%;
         display: flex;
@@ -96,12 +96,12 @@
 .KatyaFrame div{
     display: flex;
     max-width: max-content;
-    min-width: 350px;
-    width: 50%;
+    width: 100%;
     text-align: left;
 }
 .TextFrame {
     flex-direction: column;
+    max-width: 400px;
 }
 
 .TextFrame h1 {
@@ -115,20 +115,49 @@
 
 }
 .TextFrame p {
+    padding-left: 1px;
     font-family: Istok Web;
     font-size: 22px;
     font-weight: 400;
-    line-height: 31.67px;
-    max-width: 600px;
+    line-height: 31px;
+    max-width: 400px;
     text-align: left;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
 }
-
 .PicFrame {
     flex-direction: column;
 }
+.infoContainer {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    min-width: fit-content;
+}
+.infoContainer h3, h4{
+    background-color: #40923D;
+    color: aliceblue;
+    padding: 0 10px;
+    width: fit-content;
 
-.PicFrame img {
-
+    font-family: Istok Web;
+    font-size: 32px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 46.06px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+}
+.infoContainer h3 {
+    background-color: black;
+    margin-top: 20px;
+}
+@media (min-width: 1250px) {
+    .PicFrame {
+        flex-direction: row;
+    }
+    .offer div {
+            margin-right: 10%;
+    }
 }

@@ -36,6 +36,11 @@ function About(){
 
             <div className={classes.PicFrame}>
                 <img src={KatyaBorn} alt="KatyaBorn"/>
+            
+                <div className={classes.infoContainer}>
+                    <h3>Екатерина<br/>Безукладникова</h3>
+                    <h4>Создатель</h4>
+                </div>
             </div>
         </div>
         </>
