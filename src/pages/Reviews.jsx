@@ -6,7 +6,7 @@ import man1 from "./images/man1sq.jpg";
 import man2 from "./images/man2sq.jpg";
 import man3 from "./images/man3sq.jpg";
 import {useState} from "react";
-//import 'animate.css';
+import 'animate.css';
 
 let prop1 = {
     Pic: man1,
